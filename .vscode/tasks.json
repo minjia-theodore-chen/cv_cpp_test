@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "c++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/src/*.cpp",
+                "`pkg-config",
+                "opencv",
+                "--cflags",
+                "--libs`",
+                "-o",
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe"
+            ],
+        }
+    ]
+}
